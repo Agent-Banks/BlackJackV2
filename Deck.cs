@@ -10,8 +10,8 @@ namespace BlackJack
 {
     class Deck
     {
-        private List<Card> _deck = new List<Card>;
-        private List<Card> _shuffeldDeck = new List<Card>;
+        private List<Card> _deck = new List<Card>();
+        private List<Card> _shuffledDeck = new List<Card>();
 
         // deck constructor to allow methods to run
         public Deck()
@@ -26,10 +26,11 @@ namespace BlackJack
         private void AssembleDeck()
         {
             string[] _suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
-            String rank;
+            string[] _ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace", };
 
             foreach (string suite in _suits)
             {
+                // foreach(string rank in _ranks)
                 for (int i = 2; i < 15; i++)
                 {
                     switch (i)

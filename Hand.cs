@@ -9,7 +9,7 @@ namespace BlackJack
     class Hand
     {
         // creates a blank list of cards and adds it to the hand
-        private List<Card> _hand = new List<Card>;
+        private List<Card> _hand = new List<Card>();
         // property allows value to be taken from the Card Class and apply it to the hand
         public int value { get; set; }
 
