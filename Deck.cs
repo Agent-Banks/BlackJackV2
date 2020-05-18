@@ -13,13 +13,15 @@ namespace BlackJack
         private List<Card> _deck = new List<Card>;
         private List<Card> _shuffeldDeck = new List<Card>;
 
+        // deck constructor to allow methods to run
         public Deck()
         {
             AssembleDeck();
             Shuffle();
 
         }
- 
+
+        // method to assemble the deck 
         private void AssembleDeck()
         {
             string[] _suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
@@ -61,13 +63,14 @@ namespace BlackJack
             //shuffel logic
         }
 
-        public Card DealCard() 
+        // method that deals card from the deck and it returns a card
+        public Card DealCard()
         {
             Card _card = _deck.First<Card>();
             _deck.Remove(_card);
 
             return _card;
-        
+
         }
 
 

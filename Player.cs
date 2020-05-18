@@ -10,6 +10,7 @@ namespace BlackJack
     {
         private Hand _hand;
         int value;
+        // constructor for player class
         public Player()
         {
 
@@ -25,6 +26,6 @@ namespace BlackJack
                 Console.WriteLine("You are Busted!");
             }
         }
-       
+
     }
 }
