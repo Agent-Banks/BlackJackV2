@@ -8,7 +8,9 @@ namespace BlackJack
 {
     class Hand
     {
+        // creates a blank list of cards and adds it to the hand
         private List<Card> _hand = new List<Card>;
+        //
         public int value { get; set; }
 
         public Hand()

@@ -14,7 +14,7 @@ namespace BlackJack
         {
 
         }
-        // method to add a hand to the player class
+        // method to add a hand to the dealer class
         public void AddHand(Hand hand)
         {
             _hand = hand;
