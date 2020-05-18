@@ -10,12 +10,12 @@ namespace BlackJack
     {
         // creates a blank list of cards and adds it to the hand
         private List<Card> _hand = new List<Card>;
-        //
+        // property allows value to be taken from the Card Class and apply it to the hand
         public int value { get; set; }
 
         public Hand()
         {
-           
+
         }
         //method to add card into player hand
         public void AddCard(Card card)
@@ -23,14 +23,14 @@ namespace BlackJack
             value = value + card.value;
             _hand.Add(card);
         }
-
+        // method that shows all cards within the current hand
         public void ShowHand()
         {
             foreach (Card card in _hand)
             {
                 Console.WriteLine(card.display);
             }
-        
+
         }
 
     }

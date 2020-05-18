@@ -21,7 +21,8 @@ namespace BlackJack
 
         }
 
-        // method to assemble the deck 
+        // method to assemble the deck
+        // private because only needed in the Deck Class
         private void AssembleDeck()
         {
             string[] _suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
@@ -57,23 +58,36 @@ namespace BlackJack
 
         }
 
+        // shuffle method to allow for code reusability
+        // public so that the method can be used outside of Deck Class
+        // this allows the deck to be shuffled again if the game restarts
         public void Shuffle()
         {
             //AssembleDeck();
             //shuffel logic
+            var n = 52;
+            for (var firstIndex = n - 1; firstIndex >= 1; firstIndex--)
+            {
+
+                Random rnd = new Random();
+                var secondIndex = rnd.Next(firstIndex);
+                var firstValue = deck[firstIndex];
+                var secondValue = deck[secondIndex];
+                deck[firstIndex] = secondValue;
+                deck[secondIndex] = firstValue;
+            }
+
+            // method that deals card from the deck and it returns a card
+            public Card DealCard()
+            {
+                Card _card = _deck.First<Card>();
+                _deck.Remove(_card);
+
+                return _card;
+
+            }
+
+
         }
-
-        // method that deals card from the deck and it returns a card
-        public Card DealCard()
-        {
-            Card _card = _deck.First<Card>();
-            _deck.Remove(_card);
-
-            return _card;
-
-        }
-
 
     }
-
-}
