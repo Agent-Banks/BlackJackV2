@@ -21,7 +21,7 @@ namespace BlackJack
             playerHand.AddCard(_deck.DealCard());
             playerHand.AddCard(_deck.DealCard());
             _player.AddHand(playerHand);
-
+            
             int _hit = 1;
             while (_hit == 1)
                 {

@@ -13,7 +13,8 @@ namespace BlackJack
         private string _suit;
         public int value { get; }
         public string display { get; }
-
+        
+        //assigning rank and suit to Card constructor
         public Card (String rank, String suit)
         {
             _rank = rank;

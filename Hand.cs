@@ -15,7 +15,7 @@ namespace BlackJack
         {
            
         }
-
+        //method to add card into player hand
         public void AddCard(Card card)
         {
             value = value + card.value;
