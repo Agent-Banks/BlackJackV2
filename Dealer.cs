@@ -10,19 +10,14 @@ namespace BlackJack
     {
         private Hand _hand;
         public int HandValue { get; set; }
-        int value;
         public Dealer()
         {
 
         }
+        // adds a new hand from the Class Hand to the class Dealer
         public void AddHand(Hand hand)
         {
             _hand = hand;
-            if (hand.Value > 21)
-            {
-                Console.WriteLine("You are Busted!");
-            }
-
             HandValue = hand.Value;
 
         }

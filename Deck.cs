@@ -13,6 +13,8 @@ namespace BlackJack
         private List<Card> _deck = new List<Card>();
         private List<Card> shuffledDeck = new List<Card>();
 
+
+        // Constructor to create an assembled shuffled deck when Deck is created
         public Deck()
         {
             shuffledDeck = Shuffle(AssembleDeck());
@@ -73,7 +75,7 @@ namespace BlackJack
             return _deck;
 
         }
-
+        // deal card method allowing a new card in a hand
         public Card DealCard()
         {
             Card _card = shuffledDeck.First<Card>();
