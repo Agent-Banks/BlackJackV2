@@ -9,22 +9,24 @@ namespace BlackJack
     class Player
     {
         private Hand _hand;
+        public int HandValue { get; set; }
         int value;
-        // constructor for player class
         public Player()
         {
 
         }
-        // method to add a hand to the player class
+
         public void AddHand(Hand hand)
         {
             _hand = hand;
-            Console.WriteLine(hand.value);
-            // if the hand is over 21 defaults to a bust
-            if (hand.value > 21)
+            Console.WriteLine(hand.Value);
+            if (hand.Value > 21)
             {
                 Console.WriteLine("You are Busted!");
             }
+
+            HandValue = hand.Value;
+
         }
 
     }

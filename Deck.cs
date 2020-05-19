@@ -11,26 +11,20 @@ namespace BlackJack
     class Deck
     {
         private List<Card> _deck = new List<Card>();
-        private List<Card> _shuffledDeck = new List<Card>();
+        private List<Card> shuffledDeck = new List<Card>();
 
-        // deck constructor to allow methods to run
         public Deck()
         {
-            AssembleDeck();
-            Shuffle();
-
+            shuffledDeck = Shuffle(AssembleDeck());
         }
 
-        // method to assemble the deck
-        // private because only needed in the Deck Class
-        private void AssembleDeck()
+        private List<Card> AssembleDeck()
         {
             string[] _suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
-            string[] _ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace", };
+            String rank;
 
             foreach (string suite in _suits)
             {
-                // foreach(string rank in _ranks)
                 for (int i = 2; i < 15; i++)
                 {
                     switch (i)
@@ -50,45 +44,45 @@ namespace BlackJack
                         default:
                             rank = i.ToString();
                             break;
-
                     }
                     _deck.Add(new Card(rank, suite));
                 }
-
             }
+
+            return _deck;
 
         }
 
-        // shuffle method to allow for code reusability
-        // public so that the method can be used outside of Deck Class
-        // this allows the deck to be shuffled again if the game restarts
-        public void Shuffle()
+        public List<Card> Shuffle(List<Card> deck)
         {
-            //AssembleDeck();
-            //shuffel logic
-            var n = 52;
-            for (var firstIndex = n - 1; firstIndex >= 1; firstIndex--)
+
+            List<Card> _deck = deck;
+            int _cardCount = _deck.Count;
+
+            for (var i1 = _cardCount - 1; _cardCount >= 1; _cardCount--)
             {
 
                 Random rnd = new Random();
-                var secondIndex = rnd.Next(firstIndex);
-                var firstValue = deck[firstIndex];
-                var secondValue = deck[secondIndex];
-                deck[firstIndex] = secondValue;
-                deck[secondIndex] = firstValue;
+                var i2 = rnd.Next(i1);
+                var firstValue = _deck[i1];
+                var secondValue = _deck[i2];
+                _deck[i1] = secondValue;
+                _deck[i2] = firstValue;
             }
 
-            // method that deals card from the deck and it returns a card
-            public Card DealCard()
-            {
-                Card _card = _deck.First<Card>();
-                _deck.Remove(_card);
-
-                return _card;
-
-            }
-
+            return _deck;
 
         }
 
+        public Card DealCard()
+        {
+            Card _card = shuffledDeck.First<Card>();
+            _deck.Remove(_card);
+
+            return _card;
+
+        }
+
+
     }
+}

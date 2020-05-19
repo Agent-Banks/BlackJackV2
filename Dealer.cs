@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class Dealer : Player
+    class Dealer
     {
         private Hand _hand;
         int value;
@@ -14,18 +14,17 @@ namespace BlackJack
         {
 
         }
-        // method to add a hand to the dealer class
         public void AddHand(Hand hand)
         {
             _hand = hand;
-            Console.WriteLine(hand.value);
-            if (hand.value > 21)
+            Console.WriteLine(hand.Value);
+            if (hand.Value > 21)
             {
                 Console.WriteLine("You are Busted!");
                 return;
             }
-            if (hand.value >= 17)
-            { 
+            if (hand.Value >= 17)
+            {
 
             }
         }

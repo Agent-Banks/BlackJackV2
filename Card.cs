@@ -9,30 +9,38 @@ namespace BlackJack
 {
     class Card
     {
-        // property rank and suit to assign the rank and suit to the card
-        // private variable because they are only needed in Card Class
         private string _rank;
         private string _suit;
 
-        // int value used to track value of the card
-        // public so the value can be used in the Hand Class
-        public int value { get; }
+        public int Value { get; }
+        public string Display { get; }
 
-        // display is used to show the card to the player as a string
-        public string display { get; }
-
-        //assigning rank and suit to Card constructor
         public Card(String rank, String suit)
         {
             _rank = rank;
             _suit = suit;
 
+            switch (rank)
+            {
+                case "10":
 
-
-
-
-
+                case "Jack":
+                case "Queen":
+                case "King":
+                    Display = rank + " of " + suit;
+                    Value = 10;
+                    break;
+                case "Ace":
+                    Display = rank + " of " + suit;
+                    Value = 11;
+                    break;
+                default:
+                    Display = rank + " of " + suit;
+                    Value = int.Parse(rank);
+                    break;
+            }
 
         }
     }
+
 }

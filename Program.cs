@@ -10,49 +10,49 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            // instantiate deck class into program to create a new deck
+
             Deck _deck = new Deck();
-            // instantiate player and dealer class into program to create new player and dealer
+
             Player _player = new Player();
             Dealer _dealer = new Dealer();
 
-            // creates new hand for player and deals card with method DealCard
+            //Player
             Hand playerHand = new Hand();
-            playerHand.AddCard(_deck.DealCard());
-            playerHand.AddCard(_deck.DealCard());
-            // uses method to add a new hand into player hand
-            _player.AddHand(playerHand);
-            // logic to allow a hit for the player
-            int _hit = 1;
-            while (_hit == 1)
-                {
-                Console.WriteLine("Hit=1 or Stand=2");
-                string userInput = Console.ReadLine();
-
-                if (userInput == "1")
-                {
-                    playerHand.AddCard(_deck.DealCard());
-                    _player.AddHand(playerHand);
-                }
-            }
-
-            //creates a new hand for the dealer from the Hand class and uses method to deal card
+            //Dealer
             Hand dealerHand = new Hand();
+            playerHand.AddCard(_deck.DealCard());
             dealerHand.AddCard(_deck.DealCard());
+            playerHand.AddCard(_deck.DealCard());
             dealerHand.AddCard(_deck.DealCard());
 
-            _hit = 1;
-            while (_hit == 1)
+            _player.AddHand(playerHand);
+            _dealer.AddHand(dealerHand);
+
+            while (_player.HandValue <= 21)
             {
-                Console.WriteLine("Hit=1 or Stand=2");
-                string userInput = Console.ReadLine();
+                Console.WriteLine();
+                playerHand.ShowHand();
+                Console.WriteLine($"For a total value of {_player.HandValue}");
+                Console.WriteLine();
 
-                if (userInput == "1")
+                Console.Write("(H)it or (S)tand: ");
+                var answer = Console.ReadLine();
+
+                if (answer == "H")
                 {
                     playerHand.AddCard(_deck.DealCard());
-                    _player.AddHand(playerHand);
+
+                }
+                else
+                {
+                    break;
                 }
             }
+
+            Console.WriteLine();
+            playerHand.ShowHand();
+            Console.WriteLine($"For a total value of {_player.HandValue}");
+            Console.WriteLine();
 
 
         }
