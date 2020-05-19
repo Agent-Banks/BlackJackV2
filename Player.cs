@@ -19,7 +19,6 @@ namespace BlackJack
         public void AddHand(Hand hand)
         {
             _hand = hand;
-            Console.WriteLine(hand.Value);
             if (hand.Value > 21)
             {
                 Console.WriteLine("You are Busted!");

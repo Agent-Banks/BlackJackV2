@@ -31,5 +31,17 @@ namespace BlackJack
 
         }
 
+        public int TotalValue()
+        {
+            var total = 0;
+            foreach (var card in _hand)
+            {
+                var cardValue = card.Value;
+
+                total = total + cardValue;
+            }
+
+            return total;
+        }
     }
 }
