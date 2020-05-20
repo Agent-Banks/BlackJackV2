@@ -19,7 +19,7 @@ namespace BlackJack
         {
             shuffledDeck = Shuffle(AssembleDeck());
         }
-
+        // assembles a deck of cards
         private List<Card> AssembleDeck()
         {
             string[] _suits = { "Hearts", "Clubs", "Diamonds", "Spades" };
@@ -55,6 +55,7 @@ namespace BlackJack
 
         }
 
+        // shuffle cards method
         public List<Card> Shuffle(List<Card> deck)
         {
 

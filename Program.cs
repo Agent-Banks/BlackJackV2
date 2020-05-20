@@ -24,11 +24,13 @@ namespace BlackJack
                 Hand playerHand = new Hand();
                 //Dealer
                 Hand dealerHand = new Hand();
+                // deals a card from the deck and adds that card to the players hand
                 playerHand.AddCard(_deck.DealCard());
                 dealerHand.AddCard(_deck.DealCard());
                 playerHand.AddCard(_deck.DealCard());
                 dealerHand.AddCard(_deck.DealCard());
 
+                // adds a Class hand to the dealer and player
                 _player.AddHand(playerHand);
                 _dealer.AddHand(dealerHand);
 

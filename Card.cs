@@ -9,12 +9,14 @@ namespace BlackJack
 {
     class Card
     {
+        // properties for rank and suit value and display
         private string _rank;
         private string _suit;
 
         public int Value { get; }
         public string Display { get; }
 
+        // method to get display and card value
         public Card(String rank, String suit)
         {
             _rank = rank;
