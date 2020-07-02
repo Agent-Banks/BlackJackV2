@@ -1,5 +1,7 @@
 # SDG Assignment #4 : 01 - 04 - Blackjack
 
+![BlackJack Demo](SDG-GIFS/BlackJack.gif)
+
 In this project, you are creating a playable game of
 [Blackjack](https://en.wikipedia.org/wiki/Blackjack). If you haven't played this
 game ever, or in a while, grab a deck of cards and play a few games.
