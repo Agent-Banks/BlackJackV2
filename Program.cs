@@ -37,8 +37,10 @@ namespace BlackJack
                 while (playerHand.TotalValue() <= 21)
                 {
                     Console.WriteLine();
-                    playerHand.ShowHand();
+                    Console.WriteLine("---------------------");
                     Console.WriteLine($"Hand Value: {playerHand.TotalValue()}");
+                    playerHand.ShowHand();
+                    Console.WriteLine("---------------------");
                     Console.WriteLine();
 
                     Console.Write("(H)it or (S)tand: ");
@@ -54,10 +56,11 @@ namespace BlackJack
                         break;
                     }
                 }
-
                 Console.WriteLine();
+                Console.WriteLine("---------------------");
                 Console.WriteLine($"Hand Value: {playerHand.TotalValue()}");
                 playerHand.ShowHand();
+                Console.WriteLine("---------------------");
                 Console.WriteLine();
 
                 while (dealerHand.TotalValue() < 17)
@@ -66,10 +69,10 @@ namespace BlackJack
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Dealer's Hand:");
+                Console.WriteLine("---------------------");
+                Console.WriteLine($"Dealer's Hand Value: {dealerHand.TotalValue()}");
                 dealerHand.ShowHand();
-                Console.WriteLine($"Hand Value: {dealerHand.TotalValue()}");
-
+                Console.WriteLine("---------------------");
                 Console.WriteLine();
 
                 if (playerHand.TotalValue() > 21)
