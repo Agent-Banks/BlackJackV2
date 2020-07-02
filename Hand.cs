@@ -15,14 +15,14 @@ namespace BlackJack
         {
 
         }
-        // method to add card to hand class
+       
         public void AddCard(Card card)
         {
             Value = Value + card.Value;
             _hand.Add(card);
         }
 
-        // shows the hand and displays all cards
+        
         public void ShowHand()
         {
             foreach (Card card in _hand)
@@ -32,7 +32,7 @@ namespace BlackJack
 
         }
 
-        // method to get total value of the hand
+        
         public int TotalValue()
         {
             var total = 0;
