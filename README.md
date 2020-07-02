@@ -1,6 +1,6 @@
 # SDG Assignment #4 : 01 - 04 - Blackjack
 
-![BlackJack Demo](SDG-GIFS/BlackJack.gif)
+![BlackJack Demo](https://github.com/codyb23/SDG-GIFS/blob/master/BlackJack.gif)
 
 In this project, you are creating a playable game of
 [Blackjack](https://en.wikipedia.org/wiki/Blackjack). If you haven't played this
