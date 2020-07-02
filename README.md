@@ -3,7 +3,7 @@
 Create a single-player blackjack game that plays against the house, i.e., a
 human player and computer dealer.
 
-![Suncoast Bank Demo](https://github.com/codyb23/SDG-GIFS/blob/master/SuncoastBank.gif)
+![BlackJack Demo](https://github.com/codyb23/SDG-GIFS/blob/master/BlackJack.gif)
 
 ## General Rules:
 
