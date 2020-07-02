@@ -95,7 +95,7 @@ namespace BlackJack
 
                 Console.Write("Play again? (Y/N): ");
                 var playAgainString = Console.ReadLine();
-                keepPlaying = (playAgainString == "Y");
+                keepPlaying = (playAgainString == "Y" || playAgainString == "y");
             }
 
             Console.WriteLine();
