@@ -20,17 +20,17 @@ namespace BlackJack
                 Player _player = new Player();
                 Dealer _dealer = new Dealer();
 
-                //Player
+
                 Hand playerHand = new Hand();
-                //Dealer
+
                 Hand dealerHand = new Hand();
-                // deals a card from the deck and adds that card to the players hand
+
                 playerHand.AddCard(_deck.DealCard());
                 dealerHand.AddCard(_deck.DealCard());
                 playerHand.AddCard(_deck.DealCard());
                 dealerHand.AddCard(_deck.DealCard());
 
-                // adds a Class hand to the dealer and player
+
                 _player.AddHand(playerHand);
                 _dealer.AddHand(dealerHand);
 
@@ -38,7 +38,7 @@ namespace BlackJack
                 {
                     Console.WriteLine();
                     playerHand.ShowHand();
-                    Console.WriteLine($"For a total value of {playerHand.TotalValue()}");
+                    Console.WriteLine($"Hand Value: {playerHand.TotalValue()}");
                     Console.WriteLine();
 
                     Console.Write("(H)it or (S)tand: ");
@@ -56,8 +56,8 @@ namespace BlackJack
                 }
 
                 Console.WriteLine();
+                Console.WriteLine($"Hand Value: {playerHand.TotalValue()}");
                 playerHand.ShowHand();
-                Console.WriteLine($"For a total value of {playerHand.TotalValue()}");
                 Console.WriteLine();
 
                 while (dealerHand.TotalValue() < 17)
@@ -66,9 +66,9 @@ namespace BlackJack
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Dealer has:");
+                Console.WriteLine("Dealer's Hand:");
                 dealerHand.ShowHand();
-                Console.WriteLine($"For a total value of {dealerHand.TotalValue()}");
+                Console.WriteLine($"Hand Value: {dealerHand.TotalValue()}");
 
                 Console.WriteLine();
 

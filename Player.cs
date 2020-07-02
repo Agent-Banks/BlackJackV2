@@ -14,7 +14,6 @@ namespace BlackJack
         {
 
         }
-        // adds a new hand from the Class Hand to the class Player
         public void AddHand(Hand hand)
         {
             _hand = hand;
