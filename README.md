@@ -1,6 +1,6 @@
 # SDG Assignment #4 : 01 - 04 - Blackjack
 
-Create a single-player blackjack game that plays against the house, i.e., a
+A single-player blackjack game that plays against the house, i.e., a
 human player and computer dealer.
 
 ![BlackJack Demo](https://github.com/codyb23/SDG-GIFS/blob/master/BlackJack.gif)
@@ -20,7 +20,6 @@ human player and computer dealer.
 - [x] When the player stands, the house reveals its hand and hits (i.e. draw
       cards) until they have 17 or more.
 - [x] If dealer goes over 21 the dealer loses.
-
 - [x] The player should have two choices: "Hit" and "Stand."
 - [x] Consider Aces to be worth 11, never 1.
 - [x] The app should display the winner. For this mode, the winner is who is
