@@ -5,6 +5,8 @@ human player and computer dealer.
 
 ![BlackJack Demo](https://github.com/codyb23/SDG-GIFS/blob/master/BlackJack.gif)
 
+Technology used: C#, Command Line
+
 ## General Rules:
 
 - [x] The game should be played with a standard deck of playing cards (52).
