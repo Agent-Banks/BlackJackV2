@@ -1,4 +1,4 @@
-# SDG Assignment #4 : 01 - 04 - Blackjack
+# SDG Assignment #4 : Blackjack
 
 A single-player blackjack game that plays against the house, i.e., a
 human player and computer dealer.
