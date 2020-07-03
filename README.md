@@ -5,7 +5,8 @@ human player and computer dealer.
 
 ![BlackJack Demo](https://github.com/codyb23/SDG-GIFS/blob/master/BlackJack.gif)
 
-Technology used: C#, Command Line
+## Technology used:
+.NET 4.7, C#
 
 ## General Rules:
 
